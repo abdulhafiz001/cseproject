@@ -1,0 +1,285 @@
+{% load static %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All products-Abdul's car dealership</title>
+        <link rel="stylesheet" href="{% static 'rep.css'%}">
+        <link rel="preconnect" href="{% static 'https://fonts.googleapis.com'%}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com'%}" crossorigin>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,600&display=swap'%}"
+ rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css'%}">
+    </head>
+    <body>
+        <div class="container">
+            
+        
+        <div class="navbar">
+            <div class="logo">
+                <a href="{% url 'index' %}"><img src="{% static 'images/bachoo.jpg'%}" width="90px"></a>
+        </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'About' %}">About</a></li>
+                    <li><a href="{% url 'pro' %}">Products</a></li>
+                    <li><a href="{% url 'shop' %}">shop</a></li>
+                    
+                </ul>
+            </nav>
+            <a href="shop.html"><img src="{% static 'images/lock.png'%}" width="30px" height="30px"></a>
+            <img src="{% static 'images/menu.png'%}" class="menu-icon" onclick="menutoggle()">        
+        </div>
+        </div>
+
+<div class="small-container">
+    
+    <div class="row row02" >
+        <h2>All products</h2>
+        <select>
+            <option>Default shorting</option>
+            <option>short by price</option>
+            <option>short by popularity</option>
+            <option>short by rating</option>
+            <option>short by sale</option>
+        </select>
+    </div>
+    <div class="row">
+        <div class="col02">
+            <img src="{% static 'images/ford0010.jpg'%}" height="350px" width="250px">
+            <a href="{% url 'pro2' %}"></a><h4>Ford</h4>
+            <div class="rating">
+                <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star half-o"></i>
+
+            </div>
+            <p>$600,000,00</p>
+        </div>
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/lexus0011.jpg'%}" height="350px" width="250px">
+            <h4>Lexus</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-o"></i>
+
+            </div>
+            <p>$750,000,00</p>
+        </div>
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/toyota0011.jpg'%}" height="350px" width="250px">
+            <h4>Toyota</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-o"></i>
+
+            </div>
+            <p>$640,000,00</p>
+        </div>
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/bmw006.jpg'%}" height="350px" width="250px">
+            <h4>Bmw</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$300,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/lexus003.jpg'%}" height="350px" width="250px">
+            <h4>Lexus</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$230,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/toyota002.jpg'%}" height="350px" width="250px">
+            <h4>Toyota</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$150,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"> <img src="{% static 'images/benz0011.jpg'%}" height="350px" width="250px">
+            <h4>Benz</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$300,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/benz0012.jpg'%}" height="350px" width="250px">
+            <h4>Benz</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$300,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/exot0017.jpeg'%}" height="350px" width="250px">
+            <h4>Bmw</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$650,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/exot001.jpeg'%}" height="350px" width="250px">
+            <h4>Bmw</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$700,000,00</p>
+        </div>
+        
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/lexus001.jpg'%}" height="350px" width="250px">
+            <h4>Bmw</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$750,000,00</p>
+        </div>
+
+        <div class="col02">
+            <a href="{% url 'pro2' %}"></a><img src="{% static 'images/honda003.jpg'%}" height="350px" width="250px">
+            <h4>Bmw</h4>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>        
+
+            </div>
+            <p>$300,000,00</p>
+        </div>
+        </div>
+        <div class="page-btn">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+            <span>&#8594;</span>
+        </div>
+        </div>
+
+
+<!------- footer----->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h3>Download our App</h3>
+                <p>Download our App for Andriod and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="{% static 'images/playstore.png'%}" height="40px" width="30px">
+                    <img src="{% static 'images/apple.png'%}" height="40px" width="30px">
+                </div>
+            </div>
+            <div class="footer-col1">
+                <img src="{% static 'images/bachoo.jpg'%}" height="60" width="40">
+                <p>Our purpose is to bring international standerd<br> cars to africa at an affordable price.</p>
+            </div>
+            <div class="footer-col2">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twiter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p> <div class="copyright">Copyright 2022</p></div>
+    </div>
+</div>
+
+<!-----js for toggle menu----->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+        
+    }
+    </script>
+
+</body>
+</html>
+

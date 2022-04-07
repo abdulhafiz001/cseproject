@@ -1,0 +1,292 @@
+{% load static %}
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Abdul's car dealership</title>
+        <link rel="stylesheet" href="{% static 'rep.css' %}">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,600&display=swap"
+ rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css">
+
+    </head>
+    <body>
+        <div class="header">
+        <div class="container">
+            
+        
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="{% static 'images/bachoo.jpg'%}" width="90px"></a>
+        </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'About' %}">About</a></li>
+                    <li><a href="{% url 'pro' %}">Products</a></li>
+                    <li><a href="{% url 'shop' %}">shop</a></li>
+                    
+                </ul>
+            </nav>
+            <a href="{% url 'shop' %}"><img src="{% static 'images/lock.png'%}" width="30px" height="30px"></a>
+            <img src="{% static 'images/menu.png'%}" class="menu-icon" onclick="menutoggle()">        
+        </div>
+        <div class="row">
+            <div class="col">
+            <h1>Buy your cars @<br> Abdul's car dealership</h1>
+            <p>Buy your international standerd,quality cars without stress. <br>
+                 and it will be deliver to the of your home. </p> 
+                 <a href="{% url 'propage' %}" class="btn">Explore Now &#8594;</a>   
+            </div>
+            <div class="col">
+                <img src="{%  static 'images/chevrolet002.jpeg'%}">
+
+            </div>     
+        </div>
+        </div>
+        </div>
+
+<!------ featured categories -------->
+<div class="categories">
+    <div class="small-container">
+
+    
+    <div class="row">
+        <div class="col01">
+            <img src="{% static 'images/lesus002.jpg'%}" width="250px" height="350px">
+        </div>
+        <div class="col01">
+            <img src="{% static 'images/honda008.jpg'%}" width="250px" height="350px">
+        </div>
+        <div class="col01">
+            <img src="{% static 'images/honda003.jpg'%}" width="250px" height="350px">
+        </div>
+    </div>
+    </div>
+</div>
+<!------ featured products -------->
+<div class="small-container">
+    <h2> <div class="title">Featured Product</div></h2>
+    <div class="row">
+        
+         <div class="col02">
+            <a href="{% url 'pro3' %}"><img src="{% static 'images/lexus0011.jpg'%}" height="350px" width="250px"></a>
+            <a href="{% url 'pro3' %}"><h4>Lexus</h4></a>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-o"></i>
+
+            </div>
+            <p>$750,000,00</p>
+        </div>
+        <div class="col02">
+            <a href="{% url 'pro3' %}"><img src="{% static 'images/toyota0011.jpg'%}" height="350px" width="250px"></a>
+            <a href="{% url 'pro3' %}">><h4>Toyota</h4></a>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-o"></i>
+
+            </div>
+            <p>$640,000,00</p>
+        </div>
+        <div class="col02">
+            <a href="{% url 'pro2' %}"><img src="{% static 'images/bmw006.jpg'%}" height="350px" width="250px"></a>
+            <a href="{% url 'pro2' %}"><h4>Bmw</h4></a>
+            <div class="rating">
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class='fa fa-star'></i>
+                <i class="fa fa-star-half-o"></i>
+
+            </div>
+            <p>$300,000,00</p>
+        </div>
+     -->
+    </div>
+      <h2> <div class="title">Latest Product</div></h2> 
+    <div class="col02">
+        <a href="{% url 'propage' %}"><img src="{% static 'images/lexus005.jpg'%}" height="300px" width="250px"></a>
+        <a href="{% url 'propage' %}"><h4>lexus</h4></a>
+        <div class="rating">
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$320,000,00</p>
+    </div>
+    <div class="col02">
+        <a href="{% url 'propage' %}"><img src="{% static 'images/exot0012.jpeg'%}" height="350px" width="250px"></a>
+        <a href="{% url 'propage' %}"><h4>ford</h4></a>
+        <div class="rating">
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class='fa fa-star'></i>
+            <i class="fa fa-star-half-o"></i>
+        </div>
+        <p>$450,000,00</p>
+        </div>
+    </div>
+</div>
+<!------- Offer ------->
+<div class="offer">
+    <div class="small-container">
+        <div class="row">
+            <div class="col016">
+            <img src="{% static 'images/exot002.jpeg'%}" height="500" width="450" class="offer-img">    
+            </div>
+                <div class="col02">
+                    <p>Exclusively Available on Getbackground</p>
+                    <h1>Benz vision</h1>
+                    <small>Abdul's car dealership is the only car dealership you that you can get(Benz vision 2021) from, And you can buy it from our website. 
+                    
+                    </small><br>
+                    <a href="{% url 'propage' %}" class="btn">Buy Now &#8594;</a>
+
+                </div>
+            
+        </div>
+    </div>
+</div>
+<!------- Testimonial ------>
+<div class="testimonial">
+    <div class="small-container">
+        <div class="row">
+            <div class="col03">
+                <i class="fa fa-quote-left"></i>
+                <p> I buy all my cars from this plattform<br>bc there the best if all 
+                     <br>i have tried<br>i would advise you try too</p>
+                     <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"half-o></i>
+                    </div>
+                    <img src="{% static 'images/me02.jpeg'%}">
+                    <h3>abdulhafiz</h3>
+
+            </div>
+            <div class="col03">
+                <i class="fa fa-quote-left"></i>
+                <p>I would refer everyone to  this website <br> because it is the best car selling plattform  <br> no extra charges safe delivery.</p>
+                     <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"half-o"></i>
+                    </div>
+                    <img src="{% static 'images/him01.jpg'%}">
+                    <h3>haruna</h3>
+
+            </div>
+            <div class="col03">
+                <i class="fa fa-quote-left"></i>
+                <p> wow i have had a<br> very great expireince
+                     <br>buying my cars from this company.<br>always delived safe </p>
+                     <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"half-o"></i>
+                    </div>
+                    <img src="{% static 'images/me001.jpeg'%}">
+                    <h3>abdulhafizharuna</h3>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-------- brads ------->
+
+<div class="brands">
+    <div class="small-container">
+        <div class="row">
+            <div class="col04">
+                <img src="{% static 'images/benzlogo.jpeg' %}" height="170px" width="150px>
+            </div>
+            <div class="col04">
+                <img src="{% static 'images/chevroletlogo.jpg '%}" height="170px" width="150px>
+            </div>
+            <div class="col04">
+                <img src="{% static 'images/spon.jpeg' %}" height="170px" width="150px">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!------- footer----->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h3>Download our App</h3>
+                <p>Download our App for Andriod and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="{% static 'images/playstore.png'%}" height="40px" width="30px">
+                    <img src="{% static 'images/apple.png'%}" height="40px" width="30px">
+                </div>
+            </div>
+            <div class="footer-col1">
+                <img src="{% static 'images/bachoo.jpg'%}" height="60" width="40">
+                <p>Our purpose is to bring international standerd<br> cars to africa at an affordable price.</p>
+            </div>
+            <div class="footer-col2">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twiter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p> <div class="copyright">Copyright 2022</p></div>
+    </div>
+</div>
+
+<!-----js for toggle menu----->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+        
+    }
+    </script>
+    
+
+</body>
+</html>

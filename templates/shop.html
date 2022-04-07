@@ -1,0 +1,170 @@
+{% load static %}
+ <html> 
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All products-Abdul's car dealership</title>
+        <link rel="stylesheet" href="{% static 'rep.css'%}">
+        <link rel="preconnect" href="{% static 'https://fonts.googleapis.com'%}">
+<link rel="preconnect" href="{% static 'https://fonts.gstatic.com'%}" crossorigin>
+<link href="{% static 'https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,700;1,600&display=swap'%}"
+ rel="stylesheet">
+ <link rel="stylesheet" href="{% static 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/fontawesome.min.css'%}">
+    </head>
+    <body>
+        <div class="container">    
+        
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html"><img src="{% static 'images/bachoo.jpg' %}" width="90px"></a>
+        </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="{% url 'index' %}">Home</a></li>
+                    <li><a href="{% url 'About' %}">About</a></li>
+                    <li><a href="{% url 'pro' %}">Products</a></li>
+                    <li><a href="{% url 'shop' %}">shop</a></li>
+                    <li><a href="{% url 'account' %}">Account</a></li>
+                </ul>
+            </nav>
+            <a href="{% url 'shop' %}"><img src="{% static 'images/lock.png'%}" width="30px" height="30px"></a>
+            <img src="{% static 'images/menu.png'%}" class="menu-icon" onclick="menutoggle()">        
+        </div>
+        </div>
+<!------cart items details-------->
+<div class="small-container cart-page">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="{% static 'images/benz0011.jpg'%}" width="200" height="250px">
+                    <div>
+                        <p>Benz wagon</p>
+                        <small>price: $500,000.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$510,000</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="{% static 'images/chevrolet1.jpeg'%}" width="200" height="250px">
+                    <div>
+                        <p>chevrolet</p>
+                        <small>price: $90,000.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>$92,000</td>
+        </tr>
+        <tr>
+            <td>
+                <div class="cart-info">
+                    <img src="{% static 'images/lexus0011.jpg'%}" width="200" height="250px">
+                    <div>
+                        <p>Benz wagon</p>
+                        <small>price: $150,000.00</small>
+                        <br>
+                        <a href="">Remove</a>
+                    </div>
+                </div>
+            </td>
+            <td><input type="number" value="1"></td>
+            <td>160,000.00</td>
+        </tr>
+    </table>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>Subtotal</td>
+                <td>$762,000.00</td>
+            </tr>
+            <td>Tax</td>
+                <td>$1000</td>
+            </tr>
+            <tr>
+            <td>Total</td>
+                <td>$763,000.00</td>
+            </tr>
+            
+        </table>
+    </div>
+
+
+
+</div>
+
+<!------- footer----->
+
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col">
+                <h3>Download our App</h3>
+                <p>Download our App for Andriod and ios mobile phone.</p>
+                <div class="app-logo">
+                    <img src="{% static 'images/playstore.png'%}" height="40px" width="30px">
+                    <img src="{% static 'images/apple.png'%}" height="40px" width="30px">
+                </div>
+            </div>
+            <div class="footer-col1">
+                <img src="{% static 'images/bachoo.jpg'%}" height="60" width="40">
+                <p>Our purpose is to bring international standerd<br> cars to africa at an affordable price.</p>
+            </div>
+            <div class="footer-col2">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>Blog post</li>
+                    <li>Return Policy</li>
+                    <li>Join Affiliate</li>
+                </ul>
+            </div>
+            <div class="footer-col3">
+                <h3>Follow us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twiter</li>
+                    <li>Instagram</li>
+                    <li>YouTube</li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p> <div class="copyright">Copyright 2022</p></div>
+    </div>
+</div>
+
+<!-----js for toggle menu----->
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px")
+        {
+            MenuItems.style.maxHeight = "200px";
+        }
+        else
+        {
+            MenuItems.style.maxHeight = "0px";
+        }
+        
+    }
+    </script>
+
+</body>
+</html>
+
